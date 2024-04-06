@@ -362,3 +362,15 @@ label{
     line-height: normal;
     letter-spacing: -1.44px;
 }
+.table-img{
+    height: 40px;
+    width: 40px;
+}
+.parent-div {
+    width: 60%;
+
+    >h1 {
+        color: #2b2b2b;
+        padding-bottom: 20px;
+    }
+}
