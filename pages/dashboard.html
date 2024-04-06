@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sports</title>
+    <link rel="stylesheet" href="../style/main.css">
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar-scheduler@6.1.11/index.global.min.js'></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+<div class="container-fluid border-bottom" style="border-color: #EBEBEB">
+    <div class="top-bar d-flex justify-content-between align-items-center">
+        <h5 class="ms-3">Admin Panel</h5>
+        <div class="d-flex">
+            <img src="../img/bell.svg" alt="" class="me-3">
+            <img class="img-fluid rounded-circle me-2" src="../img/user.png" alt="" style="height: 32px; width: 32px">
+            <h6 class="mt-1">Amin</h6>
+        </div>
+    </div>
+
+</div>
+<div class="d-flex">
+    <div class="left-menu border-end" style="border-color: #EBEBEB">
+       <a class="btn active-menu">
+           <img src="../img/icon/radix-icons_dashboard.svg" alt="" class="me-3">
+           Dashboard
+       </a>
+
+        <a class="btn">
+            <img src="../img/icon/lucide_user.svg" alt="" class="me-3">
+            User
+        </a>
+
+        <a class="btn">
+            <img src="../img/icon/material-symbols_target.svg" alt="" class="me-3">
+            Target
+        </a>
+
+        <a href="../pages/ApplicationsPage.html" class="btn">
+            <img src="../img/icon/material-symbols_inventory-2-outline-rounded.svg" alt="" class="me-3">
+            Applications
+        </a>
+
+        <a href="../pages/InventoryTable.html" class="btn">
+            <img src="../img/icon/clarity_storage-line.svg" alt="" class="me-3">
+            Inventory
+        </a>
+
+        <a class="btn">
+            <img src="../img/icon/tabler_award.svg" alt="" class="me-3">
+            Achievements
+        </a>
+
+        <a class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" id="report-btn">
+            <img src="../img/icon/heroicons-outline_document-report.svg" alt="" class="me-3"> Report
+        </a>
+
+        <div class="collapse" id="collapseExample" style="margin-left: 33px">
+            <a href="../pages/generalReport.html" class="btn" onclick="activateButton(this)">General Report</a>
+            <a class="btn" onclick="activateButton(this)">Closing Report</a>
+        </div>
+
+        <a class="btn">
+            <img src="../img/icon/carbon_settings.svg" alt="" class="me-3">
+            Settings
+        </a>
+
+
+    </div>
+<!--    right contain-->
+    <div class="right-contain">
+        <div class="row">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row top-contain">
+                        <div class="col-md-3 " style="border-right: 1px solid #E6E6E6;">
+                            <div class="d-flex justify-content-between">
+                                <p>TOTAL REQUISITIONS</p>
+                                <a href="" class="text-primary detail-btn">Detail</a>
+                            </div>
+                            <h1>
+                                250
+                            </h1>
+                        </div>
+                        <div class="col-md-3 " style="border-right: 1px solid #E6E6E6;">
+                            <div class="d-flex justify-content-between">
+                                <p>Approved</p>
+                                <a href="" class="text-primary detail-btn">Detail</a>
+                            </div>
+                            <h1>
+                                128
+                            </h1>
+                        </div>
+                        <div class="col-md-3 " style="border-right: 1px solid #E6E6E6;">
+                            <div class="d-flex justify-content-between">
+                                <p>Pending</p>
+                                <a href="" class="text-primary detail-btn">Detail</a>
+                            </div>
+                            <h1>
+                                112
+                            </h1>
+                        </div>
+                        <div class="col-md-3 ">
+                            <div class="d-flex justify-content-between">
+                                <p>Achievements</p>
+                                <a href="" class="text-primary detail-btn">Detail</a>
+                            </div>
+                            <h1>
+                                50
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-md-9">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row top-contain p-3">
+                            <div class="col-md-12">
+                                <div id="chart"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="card mt-2">
+                    <div class="card-body">
+                        <div class="row top-contain p-3">
+                            <div class="col-md-12 d-flex justify-content-between align-items-center">
+                               <h5>Recent Requisition</h5>
+                                <a href="" style="font-size: 12px;text-decoration: none">Show All</a>
+                            </div>
+                            <div class="col-md-12 mt-2">
+                                <table class="table table-borderless requisition-table">
+                                    <tr>
+                                        <th>Applicant Type</th>
+                                        <th>Applicant Name</th>
+                                        <th>Applicant ID</th>
+                                        <th>Applicant ID</th>
+                                    </tr>
+                                    <tr>
+                                        <td>School/College</td>
+                                        <td>Monipur Uccha Biddalaya & College</td>
+                                        <td>108181</td>
+                                        <td>Cricket Bat, Cricket Ball, Tennis Ball</td>
+                                    </tr>
+                                    <tr>
+                                        <td>School/College</td>
+                                        <td>Monipur Uccha Biddalaya & College</td>
+                                        <td>108181</td>
+                                        <td>Cricket Bat, Cricket Ball, Tennis Ball</td>
+                                    </tr>
+                                    <tr>
+                                        <td>School/College</td>
+                                        <td>Monipur Uccha Biddalaya & College</td>
+                                        <td>108181</td>
+                                        <td>Cricket Bat, Cricket Ball, Tennis Ball</td>
+                                    </tr>
+                                    <tr>
+                                        <td>School/College</td>
+                                        <td>Monipur Uccha Biddalaya & College</td>
+                                        <td>108181</td>
+                                        <td>Cricket Bat, Cricket Ball, Tennis Ball</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!--    map section -->
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row top-contain pb-4">
+                            <div class="col-md-12 p-2">
+                                <h5>Requisitions by Locations</h5>
+                            </div>
+                            <div class="col-md-12 map-section">
+                                <img class="img-fluid" src="../img/Bangladesh_Map.png" alt="">
+                                <div class="map-text">RAJSHAHI</div>
+                            </div>
+                            <div class="col-md-12 mt-4">
+                                <div class="d-flex justify-content-between">
+                                    <p style="font-size: 12px;">RAJSHAHI</p>
+                                    <p style="font-size: 12px;">75%</p>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="progress">
+                                    <div class="skill progress-percent"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 mt-4">
+                                <div class="d-flex justify-content-between">
+                                    <p style="font-size: 12px;">SYLHET</p>
+                                    <p style="font-size: 12px;">85%</p>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="progress">
+                                    <div class="skill-sylhet progress-sylhet"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="card mt-3">
+                <div class="card-body">
+                    <div class="row top-contain p-4">
+                        <div class="col-12">
+                            <div id='calendar'></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+<script>
+    var options = {
+        series: [{
+            name: 'series1',
+            data: [31, 40, 28, 51, 42, 109, 100]
+        }, {
+            name: 'series2',
+            data: [11, 32, 45, 32, 34, 52, 41]
+        }],
+        chart: {
+            height: 350,
+            type: 'area'
+        },
+        dataLabels: {
+            enabled: false
+        },
+        stroke: {
+            curve: 'smooth'
+        },
+        xaxis: {
+            type: 'datetime',
+            categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"]
+        },
+        tooltip: {
+            x: {
+                format: 'dd/MM/yy HH:mm'
+            },
+        },
+    };
+
+    var chart = new ApexCharts(document.querySelector("#chart"), options);
+    chart.render();
+
+</script>
+<script>
+
+    document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');
+
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+            initialView: 'dayGridMonth',
+            headerToolbar: {
+                center: 'dayGridMonth,timeGridWeek'
+            },
+            views: {
+                titleFormat: { year: 'numeric', month: '2-digit', day: '2-digit' }
+            },
+            events: [
+                {
+                    title: 'Event 1',
+                    start: '2024-04-04', // start date of the event
+                    end: '2024-04-05' // end date of the event (optional)
+                },
+                {
+                    title: 'Event 2',
+                    start: '2024-04-06T12:00:00', // start date and time of the event
+                    end: '2024-04-06T14:00:00' // end date and time of the event (optional)
+                }
+                // Add more events as needed
+            ],
+            buttonText: {
+                today: 'today',
+                month: 'month',
+                week: 'week',
+                day: 'day',
+                list: 'list'
+            },
+            customButtons: {
+                addEventButton: {
+                    text: 'add event...',
+                    click: function() {
+                        var dateStr = prompt('Enter a date in YYYY-MM-DD format');
+                        var date = new Date(dateStr + 'T00:00:00'); // will be in local time
+
+                        if (!isNaN(date.valueOf())) { // valid?
+                            calendar.addEvent({
+                                title: 'dynamic event',
+                                start: date,
+                                allDay: true
+                            });
+                            alert('Great. Now, update your database...');
+                        } else {
+                            alert('Invalid date.');
+                        }
+                    }
+                }
+            }
+        });
+
+        calendar.render();
+
+    });
+
+</script>
+</body>
+</html>

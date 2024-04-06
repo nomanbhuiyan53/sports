@@ -1,0 +1,558 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sports</title>
+    <link rel="stylesheet" href="../style/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar-scheduler@6.1.11/index.global.min.js'></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+<div class="container-fluid border-bottom" style="border-color: #EBEBEB">
+    <div class="top-bar d-flex justify-content-between align-items-center">
+        <h5 class="ms-3">Admin Panel</h5>
+        <div class="d-flex">
+            <img src="../img/bell.svg" alt="" class="me-3">
+            <img class="img-fluid rounded-circle me-2" src="../img/user.png" alt="" style="height: 32px; width: 32px">
+            <h6 class="mt-1">Amin</h6>
+        </div>
+    </div>
+
+</div>
+<div class="d-flex">
+    <div class="left-menu border-end" style="border-color: #EBEBEB">
+        <a href="../pages/dashboard.html" class="btn ">
+            <img src="../img/icon/dashboard-icon.svg" alt="" class="me-3">
+            Dashboard
+        </a>
+
+        <a class="btn">
+            <img src="../img/icon/lucide_user.svg" alt="" class="me-3">
+            User
+        </a>
+
+        <a class="btn">
+            <img src="../img/icon/material-symbols_target.svg" alt="" class="me-3">
+            Target
+        </a>
+
+        <a class="btn active-menu">
+            <img src="../img/icon/activ-application.svg" style="color: #006299" alt="" class="me-3">
+            Applications
+        </a>
+
+        <a href="../pages/InventoryTable.html" class="btn">
+            <img src="../img/icon/clarity_storage-line.svg" alt="" class="me-3">
+            Inventory
+        </a>
+
+        <a class="btn">
+            <img src="../img/icon/tabler_award.svg" alt="" class="me-3">
+            Achievements
+        </a>
+
+        <a class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" id="report-btn">
+            <img src="../img/icon/heroicons-outline_document-report.svg" alt="" class="me-3"> Report
+        </a>
+
+        <div class="collapse" id="collapseExample" style="margin-left: 33px">
+            <a href="../pages/generalReport.html" class="btn">General Report</a>
+            <a href="../pages/closingReport.html" class="btn">Closing Report</a>
+        </div>
+
+        <a class="btn">
+            <img src="../img/icon/carbon_settings.svg" alt="" class="me-3">
+            Settings
+        </a>
+
+
+    </div>
+    <!--    right contain-->
+    <div class="right-contain">
+        <div class="row">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-4 mt-2">
+                            <label for="application-type" class="form-label">Applicant Type</label>
+                            <select class="form-select" aria-label="Default select example" id="application-type">
+                                <option selected value="0">Select</option>
+                                <option value="1">Honorable MP</option>
+                                <option value="2">Educational Institute</option>
+                                <option value="3">Sports Club</option>
+                                <option value="4">Others</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mt-5">
+                        <div class="col-md-12 mt-3 d-none" id="educational_institute">
+                            <hr>
+                            <h5>Basic Information</h5>
+                            <br>
+                            <form action="">
+                                <div id="mp-section" class="d-none">
+                                    <div class="row">
+                                        <div class="col-md-4 mt-2">
+                                            <div class="mb-3">
+                                                <label for="ParliamentSeat" class="form-label">Parliament Seat
+                                                    No.</label>
+                                                <input type="text" class="form-control" id="ParliamentSeat"
+                                                       placeholder="Enter Your Parliament Seat No."
+                                                       name="ParliamentSeat">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mt-2">
+                                            <div class="mb-3">
+                                                <label for="mp_name" class="form-label">MP Name</label>
+                                                <input type="text" class="form-control" id="mp_name"
+                                                       placeholder="Enter Your Institute" name="mp_name">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mt-2">
+                                            <div class="mb-3">
+                                                <label for="RepresentativeName" class="form-label">Representative
+                                                    Name</label>
+                                                <input type="text" class="form-control" id="RepresentativeName"
+                                                       placeholder="Enter Your Representative Name"
+                                                       name="RepresentativeName">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4 mt-2 ">
+                                            <div class="mb-3">
+                                                <label for="mp-mobile" class="form-label">Mobile No.</label>
+                                                <input type="number" class="form-control" id="mp-mobile"
+                                                       placeholder="Enter Your Mobile No." name="mobile">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mt-2">
+                                            <div class="mb-3">
+                                                <label for="mp-Email" class="form-label">Email</label>
+                                                <input type="email" class="form-control" id="mp-Email"
+                                                       placeholder="Enter Your Email" name="email">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <h5>Add Educational Institute/Club</h5>
+                                    <div class="row mt-2">
+                                        <div class="col-md-8">
+                                            <div class="row add_item">
+                                                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <label for="InstituteName" class="form-label">School/College
+                                                            Name</label>
+                                                        <input type="text" class="form-control" id="InstituteName"
+                                                               placeholder="Enter Your School/College Name"
+                                                               name="schoolOrCollegeName[]">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <label for="ClubName" class="form-label">EIIN</label>
+                                                        <input type="text" class="form-control" id="ClubName"
+                                                               placeholder="Enter EIIN Number" name="mp-eiin[]">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <button class="btn btn-sm addeventmore"
+                                                    style="border-radius: 4px;border: 1px solid #006299; color: #006299;padding: 12px 20px; width: 245px;">
+                                                + Add Educational Institute/Club
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="all-section">
+                                    <div class="row">
+                                        <div class="col-md-4 mt-2">
+                                            <div class="mb-3">
+                                                <label for="Division" class="form-label">Division</label>
+                                                <select class="form-select" aria-label="Default select example"
+                                                        id="Division" name="division_id">
+                                                    <option selected value="0">Select Your Division</option>
+                                                    <option value="1">Honorable MP</option>
+                                                    <option value="2">Educational Institute</option>
+                                                    <option value="3">Sports Club</option>
+                                                    <option value="4">Others</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mt-2">
+                                            <div class="mb-3">
+                                                <label for="District" class="form-label">District</label>
+                                                <select class="form-select" aria-label="Default select example"
+                                                        id="District" name="district_id">
+                                                    <option selected value="0">Select Your District</option>
+                                                    <option value="1">Honorable MP</option>
+                                                    <option value="2">Educational Institute</option>
+                                                    <option value="3">Sports Club</option>
+                                                    <option value="4">Others</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mt-2">
+                                            <div class="mb-3">
+                                                <label for="Upzila" class="form-label">Upzila</label>
+                                                <select class="form-select" aria-label="Default select example"
+                                                        id="Upzila"
+                                                        name="upzila_id">
+                                                    <option selected value="0">Select Your Upzila</option>
+                                                    <option value="1">Honorable MP</option>
+                                                    <option value="2">Educational Institute</option>
+                                                    <option value="3">Sports Club</option>
+                                                    <option value="4">Others</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4 mt-2">
+                                            <div class="mb-3">
+                                                <label for="Thana" class="form-label">Thana</label>
+                                                <select class="form-select" aria-label="Default select example"
+                                                        id="Thana"
+                                                        name="thana_id">
+                                                    <option selected value="0">Select Your Thana</option>
+                                                    <option value="1">Honorable MP</option>
+                                                    <option value="2">Educational Institute</option>
+                                                    <option value="3">Sports Club</option>
+                                                    <option value="4">Others</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mt-2">
+                                            <div class="mb-3">
+                                                <label for="Union" class="form-label">Union</label>
+                                                <select class="form-select" aria-label="Default select example"
+                                                        id="Union"
+                                                        name="union_id">
+                                                    <option selected value="0">Select Your Union</option>
+                                                    <option value="1">Honorable MP</option>
+                                                    <option value="2">Educational Institute</option>
+                                                    <option value="3">Sports Club</option>
+                                                    <option value="4">Others</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mt-2">
+                                            <div class="mb-3">
+                                                <label for="Ward" class="form-label">Ward</label>
+                                                <select class="form-select" aria-label="Default select example"
+                                                        id="Ward"
+                                                        name="ward_id">
+                                                    <option selected value="0">Select Your Ward</option>
+                                                    <option value="1">Honorable MP</option>
+                                                    <option value="2">Educational Institute</option>
+                                                    <option value="3">Sports Club</option>
+                                                    <option value="4">Others</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4 mt-2">
+                                            <div class="mb-3">
+                                                <label for="village" class="form-label">Village/Para/Maholla</label>
+                                                <input type="text" class="form-control" id="village"
+                                                       placeholder="Enter Your Village/Para/Maholla" name="village">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mt-2">
+                                            <div class="mb-3">
+                                                <label for="educational" class="form-label">Educational
+                                                    Institute</label>
+                                                <input type="text" class="form-control" id="educational"
+                                                       placeholder="Enter Your Educational Institute"
+                                                       name="educational">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mt-2">
+                                            <div class="mb-3">
+                                                <label for="EIIN" class="form-label">EIIN</label>
+                                                <input type="text" class="form-control" id="EIIN"
+                                                       placeholder="Enter Your EIIN" name="eiin">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4 mt-2">
+                                            <div class="mb-3">
+                                                <label for="Principal" class="form-label">Head Master / Principal
+                                                    Name</label>
+                                                <input type="text" class="form-control" id="Principal"
+                                                       placeholder=" Head Master / Principal Name" name="principal">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mt-2 ">
+                                            <div class="mb-3">
+                                                <label for="mobile" class="form-label">Mobile No.</label>
+                                                <input type="number" class="form-control" id="mobile"
+                                                       placeholder="Enter Your Mobile No." name="mobile">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mt-2">
+                                            <div class="mb-3">
+                                                <label for="Email" class="form-label">Email</label>
+                                                <input type="email" class="form-control" id="Email"
+                                                       placeholder="Enter Your Email" name="email">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr class="mt-3">
+                                <h5 class="mt-4">Requisition Items</h5>
+                                <br>
+                                <div class="row ">
+                                    <div class="col-md-4 mt-2">
+                                        <div class="mb-3">
+                                            <label for="cricketBat" class="form-label">Cricket Bat</label>
+                                            <input type="number" class="form-control" id="cricketBat" placeholder="0"
+                                                   name="cricketBat">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mt-2">
+                                        <div class="mb-3">
+                                            <label for="tennisBall" class="form-label">Tennis Ball</label>
+                                            <input type="number" class="form-control" id="tennisBall" placeholder="0"
+                                                   name="tennisBall">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mt-2">
+                                        <div class="mb-3">
+                                            <label for="Football" class="form-label">Football</label>
+                                            <input type="number" class="form-control" id="Football" placeholder="0"
+                                                   name="Football">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row ">
+                                    <div class="col-md-4 mt-2">
+                                        <div class="mb-3">
+                                            <label for="Basketball" class="form-label">Basket Ball</label>
+                                            <input type="number" class="form-control" id="Basketball" placeholder="0"
+                                                   name="Basketball">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mt-2">
+                                        <div class="mb-3">
+                                            <label for="Volleyball" class="form-label">Volley Ball</label>
+                                            <input type="number" class="form-control" id="Volleyball" placeholder="0"
+                                                   name="Volleyball">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mt-2">
+                                        <div class="mb-3">
+                                            <label for="Tennisbat" class="form-label">Tennis Bat</label>
+                                            <input type="number" class="form-control" id="Tennisbat" placeholder="0"
+                                                   name="Tennisbat">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row ">
+                                    <div class="col-md-4 mt-2">
+                                        <div class="mb-3">
+                                            <label for="cricketGloves" class="form-label">Cricket Gloves</label>
+                                            <input type="number" class="form-control" id="cricketGloves" placeholder="0"
+                                                   name="cricketGloves">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mt-2">
+                                        <div class="mb-3">
+                                            <label for="CricketStamp" class="form-label">Cricket Stamp</label>
+                                            <input type="number" class="form-control" id="CricketStamp" placeholder="0"
+                                                   name="CricketStamp">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mt-2">
+                                        <div class="mb-3">
+                                            <label for="CaromBoard" class="form-label">Carom Board</label>
+                                            <input type="number" class="form-control" id="CaromBoard" placeholder="0"
+                                                   name="CaromBoard">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row ">
+                                    <div class="col-md-4 mt-2" id="badminton-section">
+                                        <div class="mb-3">
+                                            <label for="BadmintonSet" class="form-label">Badminton Set</label>
+                                            <select class="form-select" aria-label="Default select example"
+                                                    id="BadmintonSet" name="BadmintonSet">
+                                                <option selected value="0">Select</option>
+                                                <option value="1">value</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mt-2">
+                                        <div class="mb-3">
+                                            <label for="Chess" class="form-label">Chess</label>
+                                            <input type="number" class="form-control" id="Chess" placeholder="0"
+                                                   name="Chess">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mt-2">
+                                        <div class="mb-3">
+                                            <label for="Hockey" class="form-label">Hockey</label>
+                                            <input type="number" class="form-control" id="Hockey" placeholder="0"
+                                                   name="Hockey">
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr class="mt-3">
+                                <h5 class="mt-4">Set Items</h5>
+                                <br>
+                                <div class="row ">
+                                    <div class="col-md-4 mt-2">
+                                        <div class="mb-3">
+                                            <label for="cricketSet" class="form-label">Cricket set</label>
+                                            <input type="number" class="form-control" id="cricketSet" placeholder="0"
+                                                   name="cricketSet">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mt-2">
+                                        <div class="mb-3">
+                                            <label for="FootballSet" class="form-label">Football Set</label>
+                                            <input type="number" class="form-control" id="FootballSet" placeholder="0"
+                                                   name="FootballSet">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mt-2">
+                                        <div class="mb-3">
+                                            <label for="TennisSet" class="form-label">Tennis Set</label>
+                                            <input type="number" class="form-control" id="TennisSet" placeholder="0"
+                                                   name="TennisSet">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row ">
+                                    <div class="col-md-4 mt-2">
+                                        <div class="mb-3">
+                                            <label for="BasketBallSet" class="form-label">Basket Ball Set</label>
+                                            <input type="number" class="form-control" id="BasketBallSet" placeholder="0"
+                                                   name="BasketBallSet">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mt-2">
+                                        <div class="mb-3">
+                                            <label for="VolleyBallSet" class="form-label">Volley Ball Set</label>
+                                            <input type="number" class="form-control" id="VolleyBallSet" placeholder="0"
+                                                   name="VolleyBallSet">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mt-2">
+                                        <div class="mb-3">
+                                            <label for="HockeySet" class="form-label">Hockey Set</label>
+                                            <input type="number" class="form-control" id="HockeySet" placeholder="0"
+                                                   name="HockeySet">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row ">
+                                    <div class="col-md-4 mt-2">
+                                        <div class="mb-3">
+                                            <label for="BadmintonSetTwo" class="form-label">Badminton Set</label>
+                                            <input type="number" class="form-control" id="BadmintonSetTwo"
+                                                   placeholder="0"
+                                                   name="BadmintonSetTwo">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mt-2">
+                                        <div class="mb-3">
+                                            <label for="CaromSet" class="form-label">Carom Set</label>
+                                            <input type="number" class="form-control" id="CaromSet" placeholder="0">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-end p-4 mt-5">
+                                    <button type="button" class="btn me-3">Cancel</button>
+                                    <button type="submit" class="btn"
+                                            style="border-radius: 4px;background: #006299; color: #fff">Save
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="visibility: hidden;">
+                <div class="whole_extra_item_add" id="whole_extra_item_add">
+                    <div class="delete_whole_extra_item_add row" id="delete_whole_extra_item_add">
+                        <!--    Repeater section    -->
+                        <div class="col-md-5">
+                            <div class="mb-3">
+                                <input type="text" class="form-control"
+                                       placeholder="Enter Your School/College Name"
+                                       name="schoolOrCollegeName[]">
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="mb-3">
+                                <input type="text" class="form-control"
+                                       placeholder="Enter EIIN Number" name="mp-eiin[]">
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <button class="btn btn-danger removeeventmore btn-sm">delete</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+<script>
+    $('#application-type').change(function () {
+        var selectedOption = $(this).val();
+        if (selectedOption === '1') { // mp section
+            $('#all-section').addClass('d-none');
+            $('#educational_institute').removeClass('d-none');
+            $('#mp-section').removeClass('d-none');
+            $('#mp-mobile').prop('disabled', false);
+            $('#mp-Email').prop('disabled', false);
+            $('#mobile').prop('disabled', true);
+            $('#Email').prop('disabled', true);
+        } else if (selectedOption === '2') { // educational institute
+            $('#all-section').removeClass('d-none');
+            $('#educational_institute').removeClass('d-none');
+            $('#badminton-section').addClass('d-none');
+            $('#mp-mobile').prop('disabled', true);
+            $('#mp-Email').prop('disabled', true);
+            $('#mp-section').addClass('d-none');
+        } else if (selectedOption === '3') { // Sports Club
+            $('#all-section').removeClass('d-none');
+            $('#educational_institute').removeClass('d-none');
+            $('#badminton-section').removeClass('d-none');
+            $('#mp-mobile').prop('disabled', true);
+            $('#mp-Email').prop('disabled', true);
+            $('#mp-section').addClass('d-none');
+        } else if (selectedOption === '4') { // Others
+
+        } else {
+            $('#educational_institute').addClass('d-none');
+        }
+    });
+    var counter = 0;
+    $(document).on("click", ".addeventmore", function () {
+        var whole_extra_item_add = $('#whole_extra_item_add').html();
+        $(".add_item").append(whole_extra_item_add);
+        counter++;
+    });
+    $(document).on("click", '.removeeventmore', function (event) {
+        $(this).closest(".delete_whole_extra_item_add").remove();
+        counter -= 1
+    });
+
+</script>
+
+</body>
+</html>
