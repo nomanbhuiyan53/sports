@@ -357,12 +357,13 @@ label{
 .alert {
     height: 48px;
     border: none !important;
+    background-color: #E2F3FA !important;
 }
 
 .alert-text {
     position: absolute;
     top: 12px;
-    color: #006299;
+    color: #006299 !important;
     font-family: Inter;
     font-size: 16px;
     font-style: normal;
