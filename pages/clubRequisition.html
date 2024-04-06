@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Requisition Page - Sports Club</title>
+    <link rel="stylesheet" href="../style/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar-scheduler@6.1.11/index.global.min.js'></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container-fluid border-bottom mb-3" style="border-color: #EBEBEB; background-color: #F7F7F7;">
+        <div class="container top-bar d-flex justify-content-between align-items-center">
+            <h5 class="ms-3">Distribution of Sports Goods Application Portal</h5>
+            <div class="d-flex">
+                <img src="../img/bell.svg" alt="" class="me-3">
+                <img class="img-fluid rounded-circle me-2" src="../img/user.png" alt="" style="height: 32px; width: 32px">
+                <h6 class="mt-1">Club Name</h6>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <!-- Alert Segment -->
+        <div class="alert alert-primary mb-4" role="alert">
+            <div class="alert-text">
+                <p class="">
+                    <svg width="16" height="16" viewBox="0 2 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.58333 11.75H8.41667V7.16667H7.58333V11.75ZM8 5.98083C8.14556 5.98083 8.26722 5.93167 8.365 5.83333C8.46333 5.735 8.5125 5.61333 8.5125 5.46833C8.5125 5.32278 8.46333 5.20083 8.365 5.1025C8.26722 5.00417 8.14556 4.955 8 4.955C7.85444 4.955 7.73278 5.00417 7.635 5.1025C7.53667 5.20083 7.4875 5.32278 7.4875 5.46833C7.4875 5.61333 7.53667 5.735 7.635 5.83333C7.73278 5.93167 7.85444 5.98083 8 5.98083ZM8.0025 15.5C6.96583 15.5 5.99083 15.3033 5.0775 14.91C4.16472 14.5161 3.37056 13.9817 2.695 13.3067C2.01944 12.6322 1.48472 11.8389 1.09083 10.9267C0.696945 10.0144 0.5 9.03972 0.5 8.0025C0.5 6.96583 0.696667 5.99083 1.09 5.0775C1.48389 4.16472 2.01833 3.37056 2.69333 2.695C3.36778 2.01944 4.16111 1.48472 5.07333 1.09083C5.98556 0.696945 6.96028 0.5 7.9975 0.5C9.03417 0.5 10.0092 0.696667 10.9225 1.09C11.8353 1.48389 12.6294 2.01833 13.305 2.69333C13.9806 3.36778 14.5153 4.16111 14.9092 5.07333C15.3031 5.98556 15.5 6.96028 15.5 7.9975C15.5 9.03417 15.3033 10.0092 14.91 10.9225C14.5161 11.8353 13.9817 12.6294 13.3067 13.305C12.6322 13.9806 11.8389 14.5153 10.9267 14.9092C10.0144 15.3031 9.03972 15.5 8.0025 15.5Z" fill="#006299"/>
+                    </svg>
+                    Provide the following information to complete your profile before you make a requisition
+                </p>
+            </div>
+        </div>
+
+        <div>
+            <h3>Fill up the requisition form</h3>
+        </div>
+
+        <!-- Form Section -->
+        <form>
+            <div class="mt-5">
+                <h5 class="fw-medium">Requisition Items</h5>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-4 mt-2">
+                    <div class="mb-3">
+                        <label for="cricketBat" class="form-label">Cricket Bat</label>
+                        <input type="number" class="form-control" id="cricketBat" placeholder="0"
+                               name="cricketBat">
+                    </div>
+                </div>
+                <div class="col-md-4 mt-2">
+                    <div class="mb-3">
+                        <label for="cricketBall" class="form-label">Cricket Ball</label>
+                        <input type="number" class="form-control" id="cricketBall" placeholder="0"
+                               name="cricketBall">
+                    </div>
+                </div>
+                <div class="col-md-4 mt-2">
+                    <div class="mb-3">
+                        <label for="CricketStamp" class="form-label">Cricket Stamp</label>
+                        <input type="number" class="form-control" id="CricketStamp" placeholder="0"
+                               name="CricketStamp">
+                    </div>
+                </div>
+                <div class="col-md-4 mt-2">
+                    <div class="mb-3">
+                        <label for="Basketball" class="form-label">Basket Ball</label>
+                        <input type="number" class="form-control" id="Basketball" placeholder="0"
+                               name="Basketball">
+                    </div>
+                </div>
+                <div class="col-md-4 mt-2">
+                    <div class="mb-3">
+                        <label for="Volleyball" class="form-label">Volley Ball</label>
+                        <input type="number" class="form-control" id="Volleyball" placeholder="0"
+                               name="Volleyball">
+                    </div>
+                </div>
+                <div class="col-md-4 mt-2">
+                    <div class="mb-3">
+                        <label for="Tennisbat" class="form-label">Tennis Bat</label>
+                        <input type="number" class="form-control" id="Tennisbat" placeholder="0"
+                               name="Tennisbat">
+                    </div>
+                </div>
+                <div class="col-md-4 mt-2">
+                    <div class="mb-3">
+                        <label for="cricketGloves" class="form-label">Cricket Gloves</label>
+                        <input type="number" class="form-control" id="cricketGloves" placeholder="0"
+                               name="cricketGloves">
+                    </div>
+                </div>
+                <div class="col-md-4 mt-2">
+                    <div class="mb-3">
+                        <label for="Football" class="form-label">Football</label>
+                        <input type="number" class="form-control" id="Football" placeholder="0"
+                               name="Football">
+                    </div>
+                </div>
+                <div class="col-md-4 mt-2">
+                    <div class="mb-3">
+                        <label for="CaromBoard" class="form-label">Carom Board</label>
+                        <input type="number" class="form-control" id="CaromBoard" placeholder="0"
+                               name="CaromBoard">
+                    </div>
+                </div>
+                <div class="col-md-4 mt-2">
+                    <div class="mb-3">
+                        <label for="Chess" class="form-label">Chess</label>
+                        <input type="number" class="form-control" id="Chess" placeholder="0"
+                               name="Chess">
+                    </div>
+                </div>
+                <div class="col-md-4 mt-2">
+                    <div class="mb-3">
+                        <label for="Hockey" class="form-label">Hockey</label>
+                        <input type="number" class="form-control" id="Hockey" placeholder="0"
+                               name="Hockey">
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="mt-5">
+                <h5 class="fw-medium">Set Items</h5>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-4 mt-2">
+                    <div class="mb-3">
+                        <label for="cricketSet" class="form-label">Cricket set</label>
+                        <input type="number" class="form-control" id="cricketSet" placeholder="0"
+                               name="cricketSet">
+                    </div>
+                </div>
+                <div class="col-md-4 mt-2">
+                    <div class="mb-3">
+                        <label for="FootballSet" class="form-label">Football Set</label>
+                        <input type="number" class="form-control" id="FootballSet" placeholder="0"
+                               name="FootballSet">
+                    </div>
+                </div>
+                <div class="col-md-4 mt-2">
+                    <div class="mb-3">
+                        <label for="TennisSet" class="form-label">Tennis Set</label>
+                        <input type="number" class="form-control" id="TennisSet" placeholder="0"
+                               name="TennisSet">
+                    </div>
+                </div>
+                <div class="col-md-4 mt-2">
+                    <div class="mb-3">
+                        <label for="BasketBallSet" class="form-label">Basket Ball Set</label>
+                        <input type="number" class="form-control" id="BasketBallSet" placeholder="0"
+                               name="BasketBallSet">
+                    </div>
+                </div>
+                <div class="col-md-4 mt-2">
+                    <div class="mb-3">
+                        <label for="VolleyBallSet" class="form-label">Volley Ball Set</label>
+                        <input type="number" class="form-control" id="VolleyBallSet" placeholder="0"
+                               name="VolleyBallSet">
+                    </div>
+                </div>
+                <div class="col-md-4 mt-2">
+                    <div class="mb-3">
+                        <label for="HockeySet" class="form-label">Hockey Set</label>
+                        <input type="number" class="form-control" id="HockeySet" placeholder="0"
+                               name="HockeySet">
+                    </div>
+                </div>
+                <div class="col-md-4 mt-2">
+                    <div class="mb-3">
+                        <label for="BadmintonSetTwo" class="form-label">Badminton Set</label>
+                        <input type="number" class="form-control" id="BadmintonSetTwo"
+                               placeholder="0"
+                               name="BadmintonSetTwo">
+                    </div>
+                </div>
+                <div class="col-md-4 mt-2">
+                    <div class="mb-3">
+                        <label for="CaromSet" class="form-label">Carom Set</label>
+                        <input type="number" class="form-control" id="CaromSet" placeholder="0">
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-end mt-3 mb-4">
+                <button type="submit" class="btn"
+                        style="border-radius: 4px;background: #006299; color: #fff">Submit
+                </button>
+            </div>
+        </form>
+
+    </div>
+    
+</body>
+</html>

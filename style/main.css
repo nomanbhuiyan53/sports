@@ -83,7 +83,7 @@ body{
     height: 72px;
     flex-shrink: 0;
     /*border-bottom: 1px solid #EBEBEB;*/
-    background: #FFF;
+    background: #F7F7F7;
 }
 .top-bar h5{
     font-size: 24px;
@@ -352,6 +352,24 @@ label{
     background-position: 5px 8px;
     background-size: 20px 20px;
     padding-left: 30px !important;
+}
+
+.alert {
+    height: 48px;
+    border: none !important;
+    background-color: #E2F3FA !important;
+}
+
+.alert-text {
+    position: absolute;
+    top: 12px;
+    color: #006299 !important;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.64px;
 }
 .print_page h2{
     color: #006299;
