@@ -9,7 +9,9 @@
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar-scheduler@6.1.11/index.global.min.js'></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../style/fileUpload.css">
 </head>
 <body>
 <div class="container-fluid border-bottom" style="border-color: #EBEBEB">
@@ -69,102 +71,102 @@
             Applications
         </a>
 
-        <a href="../pages/InventoryTable.html" class="btn" >
+        <a href="../pages/InventoryTable.html" class="btn">
             <img src="../img/icon/clarity_storage-line.svg" alt="" class="me-3">
             Inventory
         </a>
 
-        <a href="../pages/Achievements.html" class="btn">
+        <a class="btn ">
             <img src="../img/icon/tabler_award.svg" alt="" class="me-3">
             Achievements
         </a>
 
-        <a class="btn active-menu" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="true" aria-controls="collapseExample" id="report-btn">
-            <img src="../img/icon/report-active.svg" alt="" class="me-3"> Report
+        <a class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample"
+           aria-expanded="false" aria-controls="collapseExample" id="report-btn">
+            <img src="../img/icon/heroicons-outline_document-report.svg" alt="" class="me-3"> Report
         </a>
 
-        <div class="collapse show" id="collapseExample" style="margin-left: 33px">
-            <a href="../pages/generalReport.html" class="btn active-sub-menu" >General Report</a>
-            <a href="../pages/closingReport.html" class="btn" >Closing Report</a>
+        <div class="collapse" id="collapseExample" style="margin-left: 33px">
+            <a href="../pages/generalReport.html" class="btn">General Report</a>
+            <a href="../pages/closingReport.html" class="btn">Closing Report</a>
         </div>
-        <a class="btn">
+        <!--        setting-->
+        <a class="btn active-menu" type="button" data-bs-toggle="collapse" data-bs-target="#setting"
+           aria-expanded="false" aria-controls="setting" id="setting-btn">
             <img src="../img/icon/carbon_settings.svg" alt="" class="me-3">
             Settings
         </a>
+
+        <div class="collapse show" id="setting" style="margin-left: 33px">
+            <a class="btn active-sub-menu">Add Sports Item</a>
+            <a class="btn">Add Set</a>
+        </div>
     </div>
     <!--    right contain-->
     <div class="right-contain">
         <div class="row">
             <div class="card">
-                <div class="card-body">
                     <div class="row">
-                        <div class="col-md-12 d-flex justify-content-between"
-                             style="border-bottom: 1px solid #EBEBEB;padding: 0 0 7px 0;">
-                            <div class="d-flex">
-                                <input type="text" class="me-2 form-control" name="datefilter" value="" placeholder="Pick Date" style="width: auto"/>
-                                <select class="form-select me-2" aria-label="Default select example">
-                                    <option selected value="0">Select Division</option>
-                                    <option value="1"> 1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4"></option>
-                                </select>
-                                <select class="form-select me-2" aria-label="Default select example">
-                                    <option selected value="0">Select District</option>
-                                    <option value="1">Honorable MP</option>
-                                    <option value="2">Educational Institute</option>
-                                    <option value="3">Sports Club</option>
-                                    <option value="4">Others</option>
-                                </select>
-                                <select class="form-select me-2" aria-label="Default select example">
-                                    <option selected value="0">Select Applicant Type</option>
-                                    <option value="1">Honorable MP</option>
-                                    <option value="2">Educational Institute</option>
-                                    <option value="3">Sports Club</option>
-                                    <option value="4">Others</option>
-                                </select>
-                                <input type="search" class="form-control search-report" placeholder="Search">
+                        <div class="col-md-12">
+                            <h4>Add New Sports Item</h4>
+                        </div>
+                    </div>
+                <div class="row mt-3">
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div class="col-md-12 mb-3">
+                                <label for="sportsType" class="form-label">Enter Sports Type</label>
+                                <input type="text" class="form-control" id="sportsType" name="sportsType"
+                                       placeholder="Enter Sports Type">
                             </div>
-                            <button type="submit" class="btn" style="border-radius: 4px;border: 1px solid #006299; color: #006299">
-                                <img src="../img/icon/download-report.svg" alt=""> Download Report
+                            <div class="col-md-12 add_item">
+                                <div class="mb-3">
+                                    <label for="Equipment" class="form-label">Equipment Name</label>
+                                    <input type="text" class="form-control" id="Equipment" name="equipment[]"
+                                           placeholder="Equipment Name">
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-sm addeventmore"
+                                style="border-radius: 4px;border: 1px solid #006299; color: #006299;padding: 7px 10px; width: auto;">
+                            + Add Equipment
+                        </button>
+                        <div class="d-flex justify-content-end mt-4">
+                            <button type="submit" class="btn" style="border-radius: 4px;background: #006299; color: #fff">
+                                Save Item
                             </button>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-12 p-0">
-                            <table class="application-table mt-3 w-100">
-                                <thead>
-                                <tr>
-                                    <th scope="col">Fiscal Year</th>
-                                    <th scope="col" >Applicant Type</th>
-                                    <th scope="col" >Applicant Name</th>
-                                    <th scope="col" >Applicant ID</th>
-                                    <th scope="col" class="text-center">Requested Items</th>
-                                </tr>
-                                </thead>
-                                <tbody>
 
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
     </div>
-
+</div>
+<div style="visibility: hidden;">
+    <div class="whole_extra_item_add" id="whole_extra_item_add">
+        <div class="delete_whole_extra_item_add row" id="delete_whole_extra_item_add">
+            <!--    Repeater section    -->
+            <div class="col-md-10">
+                <div class="mb-3">
+                    <input type="text" class="form-control" name="equipment[]" placeholder="Equipment Name">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <button class="btn btn-danger removeeventmore btn-sm">delete</button>
+            </div>
+        </div>
+    </div>
+</div>
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
-
 
 <script>
-    $(function() {
+    $(function () {
 
         $('input[name="datefilter"]').daterangepicker({
             autoUpdateInput: false,
@@ -172,13 +174,23 @@
                 cancelLabel: 'Clear'
             }
         });
-        $('input[name="datefilter"]').on('apply.daterangepicker', function(ev, picker) {
+        $('input[name="datefilter"]').on('apply.daterangepicker', function (ev, picker) {
             $(this).val(picker.startDate.format('MM/DD/YYYY') + ' - ' + picker.endDate.format('MM/DD/YYYY'));
         });
-        $('input[name="datefilter"]').on('cancel.daterangepicker', function(ev, picker) {
+        $('input[name="datefilter"]').on('cancel.daterangepicker', function (ev, picker) {
             $(this).val('');
         });
 
+    });
+    var counter = 0;
+    $(document).on("click", ".addeventmore", function () {
+        var whole_extra_item_add = $('#whole_extra_item_add').html();
+        $(".add_item").append(whole_extra_item_add);
+        counter++;
+    });
+    $(document).on("click", '.removeeventmore', function (event) {
+        $(this).closest(".delete_whole_extra_item_add").remove();
+        counter -= 1
     });
 </script>
 </body>
