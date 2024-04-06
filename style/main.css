@@ -392,3 +392,28 @@ label{
         padding-bottom: 20px;
     }
 }
+.otp-input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.otp-input {
+    width: 61px;
+    height: 60px;
+    font-size: 25px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 5px;
+    border-radius: 4px;
+    border: 1px solid #D9D9D9;
+    background: #F9F9F9;
+    outline: none;
+}
+
+.otp-input:focus {
+    border-color: #D9D9D9;
+}
+.f_login p{
+    line-height: 25px;
+}
