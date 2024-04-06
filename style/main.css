@@ -83,7 +83,7 @@ body{
     height: 72px;
     flex-shrink: 0;
     /*border-bottom: 1px solid #EBEBEB;*/
-    background: #FFF;
+    background: #F7F7F7;
 }
 .top-bar h5{
     font-size: 24px;
