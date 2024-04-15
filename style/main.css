@@ -48,6 +48,8 @@ body{
 }
 .footer{
     height: 50px;
+    position: absolute;
+    bottom: 20px;
 
 }
 .footer img{
@@ -74,7 +76,7 @@ body{
     letter-spacing: -0.64px;
 }
 .f_login{
-    margin-top: 34vh !important;
+    /*margin-top: 34vh !important;*/
 }
 .f_reg{
     margin-top: 22vh !important;
@@ -95,6 +97,7 @@ body{
     width: 15% ;
     padding-top: 60px;
     height: 92.4vh;
+    display: block;
 
 }
 .right-contain{
@@ -416,4 +419,82 @@ label{
 }
 .f_login p{
     line-height: 25px;
+}
+
+.footer-section{
+    display:grid !important;
+    grid-template-columns: repeat(3, 1fr);
+}
+.side-menu-btn{
+    border: none;
+    background: none;
+    display: none;
+}
+@media screen and (max-width: 768px) {
+    .footer-section{
+        display:grid !important;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
+    }
+    .footer{
+        height: 30px;
+
+    }
+    .footer img{
+        /*width: 43px;*/
+        height: 33px;
+    }
+    .footer h6{
+        color: #000;
+        text-align: end;
+        font-size: 12px;
+    }
+    .footer p{
+        color: #000;
+        text-align: start;
+        font-size: 12px;
+    }
+    .otp-input {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+        font-weight: 700;
+    }
+    .login_title {
+        color: #006299;
+        font-size: 19px;
+    }
+    .login_card {
+        margin-top: 35px !important;
+    }
+    .footer {
+        bottom: 150px;
+    }
+    .side-menu{
+        position: relative;
+    }
+    .left-menu{
+        display: none;
+        position: absolute;
+        width: 50% ;
+        padding-top: 10px;
+        height: 60vh;
+        z-index: 9;
+        transition: 500ms ease;
+        background: #F7F7F7;
+    }
+    .right-contain{
+        width: 98%;
+        padding-top: 6px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    .side-menu-btn{
+        display: block;
+    }
+    .left-menu a {
+        height: 35px;
+        padding: 8px 20px;
+    }
+
 }
