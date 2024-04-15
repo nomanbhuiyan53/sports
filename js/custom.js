@@ -1,13 +1,13 @@
 $(document).on('click', '.side-menu-btn', function () {
     $('.left-menu').toggle();
-
 });
-$(window).resize(function() {
-    var width = $(window).width();
-    if (width > 769){
-        $('.left-menu').show();
-    }
-    if (width < 769){
+var width = $(window).width();
+if (width > 650) {
+    $('.left-menu').show();
+}
+if (width < 650) {
+    $('.left-menu').hide();
+    $('.right-contain').click(function () {
         $('.left-menu').hide();
-    }
-});
+    });
+}
