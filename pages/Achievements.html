@@ -16,7 +16,17 @@
 <body>
 <div class="container-fluid border-bottom" style="border-color: #EBEBEB">
     <div class="top-bar d-flex justify-content-between align-items-center">
-        <h5 class="ms-3">Admin Panel</h5>
+        <div class="d-flex">
+            <button class= "side-menu-btn"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+            </svg></button>
+            <div class="d-flex">
+            <button class= "side-menu-btn"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+            </svg></button>
+            <h5 class="ms-3">Admin Panel</h5>
+        </div>
+        </div>
         <div class="d-flex">
             <div class="dropdown">
                 <a class="btn me-2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -48,7 +58,7 @@
     </div>
 
 </div>
-<div class="d-flex">
+<div class="d-flex side-menu">
     <div class="left-menu border-end" style="border-color: #EBEBEB">
         <a href="../pages/dashboard.html" class="btn ">
             <img src="../img/icon/dashboard-icon.svg" alt="" class="me-3">
@@ -243,7 +253,7 @@
 <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
 <script src="../js/fileUpload.js"></script>
-
+<script src="../js/custom.js"></script>
 
 <script>
     $(function () {
