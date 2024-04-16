@@ -14,16 +14,13 @@
     <link rel="stylesheet" href="../style/fileUpload.css">
 </head>
 <body>
-<div class="container-fluid border-bottom" style="border-color: #EBEBEB">
+<div class="container-fluid border-bottom" style="border-color: #EBEBEB;padding-left: 0px;padding-right: 0px;">
     <div class="top-bar d-flex justify-content-between align-items-center">
         <div class="d-flex">
-            <button class= "side-menu-btn"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+            <button class= "ms-2 side-menu-btn"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
             </svg></button>
             <div class="d-flex">
-            <button class= "side-menu-btn"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
-            </svg></button>
             <h5 class="ms-3">Admin Panel</h5>
         </div>
         </div>
@@ -53,13 +50,13 @@
                 </div>
             </div>
             <img class="img-fluid rounded-circle me-2" src="../img/user.png" alt="" style="height: 32px; width: 32px">
-            <h6 class="mt-1">Admin</h6>
+            <h6 class="mt-1 me-2">Admin</h6>
         </div>
     </div>
 
 </div>
 <div class="d-flex side-menu">
-    <div class="left-menu border-end" style="border-color: #EBEBEB">
+    <div class="left-menu border-end" style="border-color: #EBEBEB;padding-left: 0px;padding-right: 0px;">
         <a href="../pages/dashboard.html" class="btn ">
             <img src="../img/icon/dashboard-icon.svg" alt="" class="me-3">
             Dashboard
@@ -86,7 +83,7 @@
             Inventory
         </a>
 
-        <a class="btn active-menu">
+        <a href="../pages/Achievements.html" class="btn active-menu">
             <img src="../img/icon/achievements-active.svg" alt="" class="me-3">
             Achievements
         </a>
@@ -108,8 +105,8 @@
         </a>
 
         <div class="collapse" id="setting" style="margin-left: 33px">
-            <a href="../pages/SettingSportsItem.html/" class="btn">Add Sports Item</a>
-            <a  class="btn">Add Set</a>
+            <a href="../pages/SettingSportsItem.html" class="btn">Add Sports Item</a>
+            <a href="../pages/setting_add_new_set.html" class="btn">Add Set</a>
         </div>
     </div>
     <!--    right contain-->
@@ -119,9 +116,9 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-12 d-flex justify-content-between">
-                            <h4>My Achievements</h4>
-                            <button type="submit" class="btn" data-bs-toggle="modal" data-bs-target="#achievement-modal" style="border-radius: 4px;background:#006299; color: #FAFAFA">
-                                <img src="../img/icon/white-plus.svg" alt=""> Add New Achievements
+                            <h4 class="achievements-title">My Achievements</h4>
+                            <button type="button" class="btn btn-sm" data-bs-toggle="modal" data-bs-target="#achievement-modal" style="border-radius: 4px;background:#006299; color: #FAFAFA">
+                                <img src="../img/icon/white-plus.svg" alt=""> Add New
                             </button>
                         </div>
                     </div>

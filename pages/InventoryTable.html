@@ -14,7 +14,7 @@
 <div class="container-fluid border-bottom" style="border-color: #EBEBEB;padding-left: 0px;padding-right: 0px;">
     <div class="top-bar d-flex justify-content-between align-items-center">
         <div class="d-flex">
-            <button class= "side-menu-btn"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+            <button class= "ms-2 side-menu-btn"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
             </svg></button>
             <h5 class="ms-3">Admin Panel</h5>
@@ -51,7 +51,7 @@
 
 </div>
 <div class="d-flex side-menu">
-    <div class="left-menu border-end" style="border-color: #EBEBEB">
+    <div class="left-menu border-end" style="border-color: #EBEBEB;padding-left: 0px;padding-right: 0px;">
         <a href="../pages/dashboard.html" class="btn ">
             <img src="../img/icon/dashboard-icon.svg" alt="" class="me-3">
             Dashboard
@@ -91,10 +91,17 @@
             <a href="../pages/generalReport.html" class="btn">General Report</a>
             <a href="../pages/generalReport.html" class="btn">Closing Report</a>
         </div>
-        <a class="btn">
+        <!--        setting-->
+        <a class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#setting"
+           aria-expanded="false" aria-controls="setting" id="setting-btn">
             <img src="../img/icon/carbon_settings.svg" alt="" class="me-3">
             Settings
         </a>
+
+        <div class="collapse" id="setting" style="margin-left: 33px">
+            <a href="../pages/SettingSportsItem.html" class="btn">Add Sports Item</a>
+            <a href="../pages/setting_add_new_set.html" class="btn">Add Set</a>
+        </div>
     </div>
     <!--    right contain-->
     <div class="right-contain">

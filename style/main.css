@@ -482,6 +482,9 @@ label{
         z-index: 9;
         transition: 500ms ease;
         background: #F7F7F7;
+        border-bottom: 1px solid #D9D9D9;
+        border-bottom-right-radius: 10px;
+        box-shadow: 2px 2px 5px #D9D9D9;
     }
     .right-contain{
         width: 98%;
@@ -495,6 +498,33 @@ label{
     .left-menu a {
         height: 35px;
         padding: 8px 20px;
+        font-size: 15px;
+    }
+    .top-contain .col-md-3{
+        border-bottom: 1px solid;
+        padding-bottom: 10px;
+        border-color: #E6E6E6!important;
+    }
+    .btn{
+        font-size: 12px;
+    }
+    .nav-item a{
+        font-size: 13px;
+    }
+    .achievements-title{
+        font-size: 18px;
+    }
+    .top-bar h5{
+        font-size: 18px;
+    }
+    .grid-container {
+        grid-template-columns: 1fr !important;
     }
 
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+    align-items: center;
 }

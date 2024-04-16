@@ -1,6 +1,7 @@
 $(document).on('click', '.side-menu-btn', function () {
     $('.left-menu').toggle();
 });
+<<<<<<< HEAD
 
 $(document).on('click', function (event) {
     if (!$(event.target).is('.left-menu') && !$(event.target).is('.side-menu-btn') && !$(event.target).is($(event.target).closest('.side-menu-btn').find('*')) && $('body').width() <= 768) {
@@ -14,6 +15,15 @@ $(window).resize(function () {
         $('.left-menu').show();
     }
     if (width < 769) {
+=======
+var width = $(window).width();
+if (width > 650) {
+    $('.left-menu').show();
+}
+if (width < 650) {
+    $('.left-menu').hide();
+    $('.right-contain').click(function () {
+>>>>>>> master
         $('.left-menu').hide();
-    }
-});
+    });
+}
