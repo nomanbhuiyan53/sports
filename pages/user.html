@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Users</title>
+    <link rel="stylesheet" href="../style/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar-scheduler@6.1.11/index.global.min.js'></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+<div class="container-fluid border-bottom" style="border-color: #EBEBEB">
+    <div class="top-bar d-flex justify-content-between align-items-center">
+        <div class="d-flex">
+            <button class="side-menu-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list"
+                     viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                          d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                </svg>
+            </button>
+            <h5 class="ms-3">Admin Panel</h5>
+        </div>
+        <div class="d-flex">
+            <div class="dropdown">
+                <a class="btn me-2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="../img/bell.svg" alt="">
+                </a>
+                <div class="dropdown-menu" style="width: 320px">
+                    <div class="row  p-2">
+                        <div class="col-md-12 d-flex justify-content-between">
+                            <h6>Notifications</h6>
+                            <a href="">See All</a>
+                        </div>
+                    </div>
+
+                    <table class="table border-top" style="font-size: 14px">
+                        <tr>
+                            <td><img class="img-fluid" src="../img/icon/dot.svg" alt=""></td>
+                            <td>
+                                Your requisition items request has been sent
+                                <p style="font-size: 10px;color: #919191">Just Now</p>
+                            </td>
+
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <img class="img-fluid rounded-circle me-2" src="../img/user.png" alt="" style="height: 32px; width: 32px">
+            <h6 class="mt-1">Admin</h6>
+        </div>
+    </div>
+
+</div>
+<div class="d-flex side-menu">
+    <div class="left-menu border-end" style="border-color: #EBEBEB">
+        <a href="../pages/dashboard.html" class="btn ">
+            <img src="../img/icon/dashboard-icon.svg" alt="" class="me-3">
+            Dashboard
+        </a>
+
+        <a class="btn active-menu" href="../pages/user.html">
+            <img src="../img/icon/lucide_user.svg" alt="" class="me-3">
+            User
+        </a>
+
+        <a class="btn" href="target.html">
+            <img src="../img/icon/material-symbols_target.svg" alt="" class="me-3">
+            Target
+        </a>
+
+        <a href="../pages/ApplicationsPage.html" class="btn">
+            <img src="../img/icon/activ-application.svg" style="color: #006299" alt="" class="me-3">
+            Applications
+        </a>
+
+        <a href="../pages/InventoryTable.html" class="btn">
+            <img src="../img/icon/clarity_storage-line.svg" alt="" class="me-3">
+            Inventory
+        </a>
+
+        <a href="../pages/Achievements.html" class="btn">
+            <img src="../img/icon/tabler_award.svg" alt="" class="me-3">
+            Achievements
+        </a>
+
+        <a class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false"
+           aria-controls="collapseExample" id="report-btn">
+            <img src="../img/icon/heroicons-outline_document-report.svg" alt="" class="me-3"> Report
+        </a>
+
+        <div class="collapse" id="collapseExample" style="margin-left: 33px">
+            <a href="../pages/generalReport.html" class="btn" onclick="activateButton(this)">General Report</a>
+            <a href="../pages/ClosingReport.html" class="btn" onclick="activateButton(this)">Closing Report</a>
+        </div>
+
+        <a class="btn">
+            <img src="../img/icon/carbon_settings.svg" alt="" class="me-3">
+            Settings
+        </a>
+    </div>
+    <!--    right contain-->
+    <div class="right-contain">
+        <div class="row">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-12 d-flex justify-content-between">
+                            <div class="w-100 d-flex justify-content-end">
+                                <button class="btn btn-sm border border-dark d-flex align-items-center"><img
+                                        src="../img/icon/ion_filter-outline.svg" alt="" class="me-3"> Filter
+                                </button>
+                                <a role="button" class="btn btn-sm ms-3 add-new-btn d-flex align-items-center"
+                                   data-bs-toggle="modal" data-bs-target="#useCreate">
+                                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_55_370)">
+                                            <path d="M7.33333 13.8333C7.33333 14.0101 7.40357 14.1797 7.5286 14.3047C7.65362 14.4298 7.82319 14.5 8 14.5C8.17681 14.5 8.34638 14.4298 8.4714 14.3047C8.59643 14.1797 8.66667 14.0101 8.66667 13.8333V9.16667H13.3333C13.5101 9.16667 13.6797 9.09643 13.8047 8.9714C13.9298 8.84638 14 8.67681 14 8.5C14 8.32319 13.9298 8.15362 13.8047 8.0286C13.6797 7.90357 13.5101 7.83333 13.3333 7.83333H8.66667V3.16667C8.66667 2.98986 8.59643 2.82029 8.4714 2.69526C8.34638 2.57024 8.17681 2.5 8 2.5C7.82319 2.5 7.65362 2.57024 7.5286 2.69526C7.40357 2.82029 7.33333 2.98986 7.33333 3.16667V7.83333H2.66667C2.48986 7.83333 2.32029 7.90357 2.19526 8.0286C2.07024 8.15362 2 8.32319 2 8.5C2 8.67681 2.07024 8.84638 2.19526 8.9714C2.32029 9.09643 2.48986 9.16667 2.66667 9.16667H7.33333V13.8333Z"
+                                                  fill="white"/>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_55_370">
+                                                <rect width="16" height="16" fill="white" transform="translate(0 0.5)"/>
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    Add New User</a>
+                            </div>
+                        </div>
+
+                        <div class="tab-content" style="padding-left: 0px;padding-right: 0px;">
+                            <div id="home" class="tab-pane fade show active" role="tabpanel" aria-labelledby="home-tab">
+                                <table class=" application-table mt-3 w-100">
+                                    <thead>
+                                    <tr>
+                                        <th>User Name</th>
+                                        <th>User Type</th>
+                                        <th>Role</th>
+                                        <th>Status</th>
+                                        <th class="text-center">Action</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>John Doe</td>
+                                        <td>Admin</td>
+                                        <td>Officer</td>
+                                        <td>Active</td>
+                                        <td class="text-center">
+                                            <button class="btn btn-sm" data-bs-toggle="modal"
+                                                    data-bs-target="#useEdit"><span
+                                                    class="text-success">Edit</span></button>
+                                            |
+                                            <button class="btn btn-sm"><span class="text-danger">Delete</span></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>John Doe</td>
+                                        <td>Admin</td>
+                                        <td>Manager</td>
+                                        <td>Active</td>
+                                        <td class="text-center">
+                                            <button class="btn btn-sm" data-bs-toggle="modal"
+                                                    data-bs-target="#useEdit"><span
+                                                    class="text-success">Edit</span></button>
+                                            |
+                                            <button class="btn btn-sm"><span class="text-danger">Delete</span></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>John Doe</td>
+                                        <td>Admin</td>
+                                        <td>Player</td>
+                                        <td>Active</td>
+                                        <td class="text-center">
+                                            <button class="btn btn-sm" data-bs-toggle="modal"
+                                                    data-bs-target="#useEdit"><span
+                                                    class="text-success">Edit</span></button>
+                                            |
+                                            <button class="btn btn-sm"><span class="text-danger">Delete</span></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>John Doe</td>
+                                        <td>Admin</td>
+                                        <td>Other</td>
+                                        <td>Active</td>
+                                        <td class="text-center">
+                                            <button class="btn btn-sm" data-bs-toggle="modal"
+                                                    data-bs-target="#useEdit"><span
+                                                    class="text-success">Edit</span></button>
+                                            |
+                                            <button class="btn btn-sm"><span class="text-danger">Delete</span></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>John Doe</td>
+                                        <td>Admin</td>
+                                        <td>Other</td>
+                                        <td>Active</td>
+                                        <td class="text-center">
+                                            <button class="btn btn-sm" data-bs-toggle="modal"
+                                                    data-bs-target="#useEdit"><span
+                                                    class="text-success">Edit</span></button>
+                                            |
+                                            <button class="btn btn-sm"><span class="text-danger">Delete</span></button>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <nav aria-label="Page navigation example" class="mt-3">
+                                    <ul class="pagination justify-content-end">
+                                        <li class="page-item disabled">
+                                            <a class="page-link">Previous</a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#">Next</a>
+                                        </li>
+                                    </ul>
+
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Create Modal -->
+    <div class="modal fade" id="useCreate" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content p-5">
+                <h5 class="mt-4 mb-3">Add Sports Items</h5>
+                <form action="#">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="form-label" for="userName">User Name</label>
+                            <input type="text" id="userName" class="form-control" placeholder="Enter User Name">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label" for="role">Select Role</label>
+                            <select class="form-select" id="role">
+                                <option selected value="0">Select Role</option>
+                                <option value="1">Admin</option>
+                                <option value="2">Super Admin</option>
+                                <option value="3">Manager</option>
+                                <option value="4">Others</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-md-6">
+                            <label class="form-label" for="userType">User Type</label>
+                            <input type="text" id="userType" class="form-control" placeholder="Enter User Name">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label" for="status">Status</label>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" role="switch" id="status" checked>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class="d-flex justify-content-end ">
+                    <button type="button" class="btn me-3" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn" style="border-radius: 4px;background: #006299; color: #fff">Save
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Modal -->
+    <div class="modal fade" id="useEdit" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content p-5">
+                <h5 class="mt-4 mb-3">Add Sports Items</h5>
+                <form action="#">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="form-label" for="userNameEdit">User Name</label>
+                            <input type="text" id="userNameEdit" class="form-control" value="Noman Ali Khan">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label" for="roleEdit">Select Role</label>
+                            <select class="form-select" id="roleEdit">
+                                <option selected value="0">Select Role</option>
+                                <option value="1">Admin</option>
+                                <option value="2" selected>Super Admin</option>
+                                <option value="3">Manager</option>
+                                <option value="4">Others</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-md-6">
+                            <label class="form-label" for="userTypeEdit">User Type</label>
+                            <input type="text" id="userTypeEdit" class="form-control" value="Permanent">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label" for="statusEdit">Status</label>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" role="switch" id="statusEdit" checked>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class="d-flex justify-content-end ">
+                    <button type="button" class="btn me-3" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn" style="border-radius: 4px;background: #006299; color: #fff">Save
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+<script src="../js/custom.js"></script>
+</body>
+</html>
