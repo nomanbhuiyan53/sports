@@ -528,3 +528,36 @@ label{
     gap: 1rem;
     align-items: center;
 }
+.inventory-view-card{
+    display: flex;
+    padding: 17px 37px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background: #F4F5F8 !important;
+}
+.inventory-view-card h6{
+    color: #283646;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.56px;
+}
+.inventory-view-card h5{
+    color: #283646;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -0.96px;
+}
+.inv-list a{
+    text-decoration: none;
+    color: #798999;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.56px;
+}
