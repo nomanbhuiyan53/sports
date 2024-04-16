@@ -9,15 +9,19 @@
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar-scheduler@6.1.11/index.global.min.js'></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"/>
 </head>
 <body>
 <div class="container-fluid border-bottom" style="border-color: #EBEBEB;padding-left: 0px;padding-right: 0px;">
     <div class="top-bar d-flex justify-content-between align-items-center">
         <div class="d-flex">
-            <button class= "ms-2 side-menu-btn"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
-            </svg></button>
+            <button class="ms-2 side-menu-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list"
+                     viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                          d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                </svg>
+            </button>
             <h5 class="ms-3">Admin Panel</h5>
         </div>
         <div class="d-flex">
@@ -74,7 +78,7 @@
             Applications
         </a>
 
-        <a href="../pages/InventoryTable.html" class="btn" >
+        <a href="../pages/InventoryTable.html" class="btn">
             <img src="../img/icon/clarity_storage-line.svg" alt="" class="me-3">
             Inventory
         </a>
@@ -84,18 +88,26 @@
             Achievements
         </a>
 
-        <a class="btn active-menu" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="true" aria-controls="collapseExample" id="report-btn">
+        <a class="btn active-menu" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample"
+           aria-expanded="true" aria-controls="collapseExample" id="report-btn">
             <img src="../img/icon/report-active.svg" alt="" class="me-3"> Report
         </a>
 
         <div class="collapse show" id="collapseExample" style="margin-left: 33px">
-            <a href="../pages/generalReport.html" class="btn active-sub-menu" >General Report</a>
-            <a href="../pages/closingReport.html" class="btn" >Closing Report</a>
+            <a href="../pages/generalReport.html" class="btn active-sub-menu">General Report</a>
+            <a href="../pages/closingReport.html" class="btn">Closing Report</a>
         </div>
-        <a class="btn">
+        <!--        setting-->
+        <a class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#setting"
+           aria-expanded="false" aria-controls="setting" id="setting-btn">
             <img src="../img/icon/carbon_settings.svg" alt="" class="me-3">
             Settings
         </a>
+
+        <div class="collapse" id="setting" style="margin-left: 33px">
+            <a href="../pages/SettingSportsItem.html" class="btn">Add Sports Item</a>
+            <a href="../pages/setting_add_new_set.html" class="btn">Add Set</a>
+        </div>
     </div>
     <!--    right contain-->
     <div class="right-contain">
@@ -105,15 +117,20 @@
                     <div class="row">
                         <div class="col-md-12 d-flex justify-content-between"
                              style="border-bottom: 1px solid #EBEBEB;padding: 0 0 7px 0;">
-                            <div class="d-flex">
-                                <input type="text" class="me-2 form-control" name="datefilter" value="" placeholder="Pick Date" style="width: auto"/>
+                            <div class="grid-container">
+                                <!-- Date input field -->
+                                <input type="text" class="me-2 form-control" name="datefilter" value="" placeholder="Pick Date" style="width: auto;"/>
+
+                                <!-- Select dropdown for Division -->
                                 <select class="form-select me-2" aria-label="Default select example">
                                     <option selected value="0">Select Division</option>
-                                    <option value="1"> 1</option>
+                                    <option value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
-                                    <option value="4"></option>
+                                    <option value="4"></option> <!-- This option seems to be empty -->
                                 </select>
+
+                                <!-- Select dropdown for District -->
                                 <select class="form-select me-2" aria-label="Default select example">
                                     <option selected value="0">Select District</option>
                                     <option value="1">Honorable MP</option>
@@ -121,6 +138,8 @@
                                     <option value="3">Sports Club</option>
                                     <option value="4">Others</option>
                                 </select>
+
+                                <!-- Select dropdown for Applicant Type -->
                                 <select class="form-select me-2" aria-label="Default select example">
                                     <option selected value="0">Select Applicant Type</option>
                                     <option value="1">Honorable MP</option>
@@ -128,11 +147,14 @@
                                     <option value="3">Sports Club</option>
                                     <option value="4">Others</option>
                                 </select>
-                                <input type="search" class="form-control search-report" placeholder="Search">
+
+                                <!-- Search input field -->
+                                <input type="search" class="form-control" placeholder="Search">
+                                <button type="submit" class="btn align-items-end"
+                                        style="border-radius: 4px;border: 1px solid #006299; color: #006299">
+                                    <img src="../img/icon/download-report.svg" alt=""> Download Report
+                                </button>
                             </div>
-                            <button type="submit" class="btn" style="border-radius: 4px;border: 1px solid #006299; color: #006299">
-                                <img src="../img/icon/download-report.svg" alt=""> Download Report
-                            </button>
                         </div>
                     </div>
                     <div class="row">
@@ -141,9 +163,9 @@
                                 <thead>
                                 <tr>
                                     <th scope="col">Fiscal Year</th>
-                                    <th scope="col" >Applicant Type</th>
-                                    <th scope="col" >Applicant Name</th>
-                                    <th scope="col" >Applicant ID</th>
+                                    <th scope="col">Applicant Type</th>
+                                    <th scope="col">Applicant Name</th>
+                                    <th scope="col">Applicant ID</th>
                                     <th scope="col" class="text-center">Requested Items</th>
                                 </tr>
                                 </thead>
@@ -157,19 +179,19 @@
             </div>
         </div>
     </div>
-
+</div>
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
 
-    <script src="../js/custom.js"></script>
+<script src="../js/custom.js"></script>
 <script>
-    $(function() {
+    $(function () {
 
         $('input[name="datefilter"]').daterangepicker({
             autoUpdateInput: false,
@@ -177,10 +199,10 @@
                 cancelLabel: 'Clear'
             }
         });
-        $('input[name="datefilter"]').on('apply.daterangepicker', function(ev, picker) {
+        $('input[name="datefilter"]').on('apply.daterangepicker', function (ev, picker) {
             $(this).val(picker.startDate.format('MM/DD/YYYY') + ' - ' + picker.endDate.format('MM/DD/YYYY'));
         });
-        $('input[name="datefilter"]').on('cancel.daterangepicker', function(ev, picker) {
+        $('input[name="datefilter"]').on('cancel.daterangepicker', function (ev, picker) {
             $(this).val('');
         });
 

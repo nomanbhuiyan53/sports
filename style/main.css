@@ -517,5 +517,14 @@ label{
     .top-bar h5{
         font-size: 18px;
     }
+    .grid-container {
+        grid-template-columns: 1fr !important;
+    }
 
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+    align-items: center;
 }
