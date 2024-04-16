@@ -72,7 +72,7 @@
         </a>
 
         <a href="../pages/ApplicationsPage.html" class="btn">
-            <img src="../img/icon/activ-application.svg" style="color: #006299" alt="" class="me-3">
+            <img src="../img/icon/material-symbols_inventory-2-outline-rounded.svg" style="color: #006299" alt="" class="me-3">
             Applications
         </a>
 
@@ -96,10 +96,16 @@
             <a href="../pages/ClosingReport.html" class="btn" onclick="activateButton(this)">Closing Report</a>
         </div>
 
-        <a class="btn">
+        <a class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#setting"
+           aria-expanded="false" aria-controls="setting" id="setting-btn">
             <img src="../img/icon/carbon_settings.svg" alt="" class="me-3">
             Settings
         </a>
+
+        <div class="collapse" id="setting" style="margin-left: 33px">
+            <a href="settingSportsItem.html" class="btn">Add Sports Item</a>
+            <a href="../pages/setting_add_new_set.html" class="btn">Add Set</a>
+        </div>
     </div>
     <!--    right contain-->
     <div class="right-contain">
