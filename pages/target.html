@@ -3,17 +3,17 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Applications</title>
+    <title>Targets</title>
     <link rel="stylesheet" href="../style/main.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar-scheduler@6.1.11/index.global.min.js'></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
-<div class="container-fluid border-bottom" style="border-color: #EBEBEB;padding-left: 0px;padding-right: 0px;">
+<div class="container-fluid border-bottom" style="border-color: #EBEBEB">
     <div class="top-bar d-flex justify-content-between align-items-center">
         <div class="d-flex">
-            <button class= "ms-2 side-menu-btn"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+            <button class= "side-menu-btn"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
             </svg></button>
             <h5 class="ms-3">Admin Panel</h5>
@@ -44,29 +44,29 @@
                 </div>
             </div>
             <img class="img-fluid rounded-circle me-2" src="../img/user.png" alt="" style="height: 32px; width: 32px">
-            <h6 class="mt-1 me-2">Admin</h6>
+            <h6 class="mt-1">Admin</h6>
         </div>
     </div>
 
 </div>
 <div class="d-flex side-menu">
-    <div class="left-menu border-end" style="border-color: #EBEBEB;padding-left: 0px;padding-right: 0px;">
+    <div class="left-menu border-end" style="border-color: #EBEBEB">
         <a href="../pages/dashboard.html" class="btn ">
             <img src="../img/icon/dashboard-icon.svg" alt="" class="me-3">
             Dashboard
         </a>
 
-        <a href="../pages/user.html" class="btn">
+         <a class="btn" href="user.html">
             <img src="../img/icon/lucide_user.svg" alt="" class="me-3">
             User
         </a>
 
-        <a href="../pages/target.html" class="btn">
+        <a class="btn active-menu" href="../pages/target.html">
             <img src="../img/icon/material-symbols_target.svg" alt="" class="me-3">
             Target
         </a>
 
-        <a href="../pages/applicationsPage.html" class="btn active-menu">
+        <a href="../pages/ApplicationsPage.html" class="btn">
             <img src="../img/icon/activ-application.svg" style="color: #006299" alt="" class="me-3">
             Applications
         </a>
@@ -76,7 +76,7 @@
             Inventory
         </a>
 
-        <a href="achievements.html" class="btn">
+        <a href="../pages/Achievements.html" class="btn">
             <img src="../img/icon/tabler_award.svg" alt="" class="me-3">
             Achievements
         </a>
@@ -87,22 +87,13 @@
 
         <div class="collapse" id="collapseExample" style="margin-left: 33px">
             <a href="../pages/generalReport.html" class="btn" onclick="activateButton(this)">General Report</a>
-            <a href="closingReport.html" class="btn" onclick="activateButton(this)">Closing Report</a>
+            <a href="../pages/ClosingReport.html" class="btn" onclick="activateButton(this)">Closing Report</a>
         </div>
 
-        <!--        setting-->
-        <a class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#setting"
-           aria-expanded="false" aria-controls="setting" id="setting-btn">
+        <a class="btn">
             <img src="../img/icon/carbon_settings.svg" alt="" class="me-3">
             Settings
         </a>
-
-        <div class="collapse" id="setting" style="margin-left: 33px">
-            <a href="settingSportsItem.html" class="btn">Add Sports Item</a>
-            <a href="../pages/setting_add_new_set.html" class="btn">Add Set</a>
-        </div>
-
-
     </div>
     <!--    right contain-->
     <div class="right-contain">
@@ -110,18 +101,10 @@
             <div class="card">
                 <div class="card-body">
                     <div class="row">
-                        <div class="col-md-12 d-flex justify-content-between" style="border-bottom: 1px solid #EBEBEB;padding-left: 0px;padding-right: 0px;" >
-                            <ul class="nav nav-underline" >
-                                <li class="nav-item">
-                                    <a class="nav-link active" id="home-tab" data-bs-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Pending <span class="badge bg-custom">4</span></a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" id="menu1-tab" data-bs-toggle="tab" href="#menu1" role="tab" aria-controls="menu1" aria-selected="false">Approved</a>
-                                </li>
-                            </ul>
-                            <div style="border-bottom: 1px solid #EBEBEB">
-                                <button class="btn btn-sm border border-dark"><img src="../img/icon/ion_filter-outline.svg" alt="" class="me-3"> Filter</button>
-                                <a href="../pages/applicationCreate.html" class="btn btn-sm add-new-btn" >
+                        <div class="col-md-12 d-flex justify-content-between">
+                            <div class="w-100 d-flex justify-content-end">
+                                <button class="btn btn-sm border border-dark d-flex align-items-center"><img src="../img/icon/ion_filter-outline.svg" alt="" class="me-3"> Filter</button>
+                                <a href="../pages/applicationCreate.html" class="btn btn-sm ms-3 add-new-btn d-flex align-items-center" >
                                     <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <g clip-path="url(#clip0_55_370)">
                                             <path d="M7.33333 13.8333C7.33333 14.0101 7.40357 14.1797 7.5286 14.3047C7.65362 14.4298 7.82319 14.5 8 14.5C8.17681 14.5 8.34638 14.4298 8.4714 14.3047C8.59643 14.1797 8.66667 14.0101 8.66667 13.8333V9.16667H13.3333C13.5101 9.16667 13.6797 9.09643 13.8047 8.9714C13.9298 8.84638 14 8.67681 14 8.5C14 8.32319 13.9298 8.15362 13.8047 8.0286C13.6797 7.90357 13.5101 7.83333 13.3333 7.83333H8.66667V3.16667C8.66667 2.98986 8.59643 2.82029 8.4714 2.69526C8.34638 2.57024 8.17681 2.5 8 2.5C7.82319 2.5 7.65362 2.57024 7.5286 2.69526C7.40357 2.82029 7.33333 2.98986 7.33333 3.16667V7.83333H2.66667C2.48986 7.83333 2.32029 7.90357 2.19526 8.0286C2.07024 8.15362 2 8.32319 2 8.5C2 8.67681 2.07024 8.84638 2.19526 8.9714C2.32029 9.09643 2.48986 9.16667 2.66667 9.16667H7.33333V13.8333Z" fill="white"/>
@@ -132,8 +115,7 @@
                                             </clipPath>
                                         </defs>
                                     </svg>
-                                    Add New
-                                    </a>
+                                    Add New Target</a>
                             </div>
                         </div>
 
@@ -142,49 +124,49 @@
                                 <table class=" application-table mt-3 w-100">
                                     <thead>
                                     <tr>
-                                        <th>Applicant Type</th>
-                                        <th>Applicant Name</th>
-                                        <th>Applicant ID</th>
+                                        <th>Type</th>
+                                        <th>Name</th>
+                                        <th>ID</th>
                                         <th>Requested Items</th>
                                         <th class="text-center">Action</th>
                                     </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>Student</td>
-                                            <td>John Doe</td>
-                                            <td>1234567890</td>
-                                            <td>Item 1, Item 2, Item 3</td>
-                                            <td class="text-center"><button class="btn btn-sm"  data-bs-toggle="modal" data-bs-target="#application-store"><span class="text-success">Approve</span> | <span class="text-danger">Decline</span></button></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Student</td>
-                                            <td>John Doe</td>
-                                            <td>1234567890</td>
-                                            <td>Item 1, Item 2, Item 3</td>
-                                            <td class="text-center"><button class="btn btn-sm"  data-bs-toggle="modal" data-bs-target="#application-store"><span class="text-success">Approve</span> | <span class="text-danger">Decline</span></button></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Student</td>
-                                            <td>John Doe</td>
-                                            <td>1234567890</td>
-                                            <td>Item 1, Item 2, Item 3</td>
-                                            <td class="text-center"><button class="btn btn-sm"  data-bs-toggle="modal" data-bs-target="#application-store"><span class="text-success">Approve</span> | <span class="text-danger">Decline</span></button></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Student</td>
-                                            <td>John Doe</td>
-                                            <td>1234567890</td>
-                                            <td>Item 1, Item 2, Item 3</td>
-                                            <td class="text-center"><button class="btn btn-sm"  data-bs-toggle="modal" data-bs-target="#application-store"><span class="text-success">Approve</span> | <span class="text-danger">Decline</span></button></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Student</td>
-                                            <td>John Doe</td>
-                                            <td>1234567890</td>
-                                            <td>Item 1, Item 2, Item 3</td>
-                                            <td class="text-center"><button class="btn btn-sm"  data-bs-toggle="modal" data-bs-target="#application-store"><span class="text-success">Approve</span> | <span class="text-danger">Decline</span></button></td>
-                                        </tr>
+                                    <tr>
+                                        <td>Student</td>
+                                        <td>John Doe</td>
+                                        <td>1234567890</td>
+                                        <td>Item 1, Item 2, Item 3</td>
+                                        <td class="text-center"><button class="btn btn-sm"  data-bs-toggle="modal" data-bs-target="#application-store"><span class="text-success">Approve</span> | <span class="text-danger">Decline</span></button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Student</td>
+                                        <td>John Doe</td>
+                                        <td>1234567890</td>
+                                        <td>Item 1, Item 2, Item 3</td>
+                                        <td class="text-center"><button class="btn btn-sm"  data-bs-toggle="modal" data-bs-target="#application-store"><span class="text-success">Approve</span> | <span class="text-danger">Decline</span></button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Student</td>
+                                        <td>John Doe</td>
+                                        <td>1234567890</td>
+                                        <td>Item 1, Item 2, Item 3</td>
+                                        <td class="text-center"><button class="btn btn-sm"  data-bs-toggle="modal" data-bs-target="#application-store"><span class="text-success">Approve</span> | <span class="text-danger">Decline</span></button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Student</td>
+                                        <td>John Doe</td>
+                                        <td>1234567890</td>
+                                        <td>Item 1, Item 2, Item 3</td>
+                                        <td class="text-center"><button class="btn btn-sm"  data-bs-toggle="modal" data-bs-target="#application-store"><span class="text-success">Approve</span> | <span class="text-danger">Decline</span></button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Student</td>
+                                        <td>John Doe</td>
+                                        <td>1234567890</td>
+                                        <td>Item 1, Item 2, Item 3</td>
+                                        <td class="text-center"><button class="btn btn-sm"  data-bs-toggle="modal" data-bs-target="#application-store"><span class="text-success">Approve</span> | <span class="text-danger">Decline</span></button></td>
+                                    </tr>
                                     </tbody>
                                 </table>
                                 <nav aria-label="Page navigation example" class="mt-3">
@@ -358,6 +340,5 @@
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <script src="../js/custom.js"></script>
-
 </body>
 </html>
